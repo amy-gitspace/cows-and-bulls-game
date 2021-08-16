@@ -1,0 +1,20 @@
+import random
+randnum=random.sample(range(1,10),4)
+print(randnum)
+num_str=input('please input four numbers seprate by space: ')
+num_list=[int(item) for item in num_str.split()]
+
+
+print(num_list)
+cow=0 
+bull=0 
+for i in range(0,len(num_list)):
+    #print(randnum[i])
+    if randnum[i]==num_list[i]:
+        cow=cow+1
+    else:
+        bull=bull+1
+if cow==4:
+    print('the random number is: ',randnum ,' ，you win!')
+else:
+    print('cow= {},bull= {}'.format(cow,bull))
